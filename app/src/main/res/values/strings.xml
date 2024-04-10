@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Patika Getir Bootcamp W4</string>
+    <string name="post_operation">POST OPERATION</string>
+    <string name="get_operation">GET OPERATION</string>
+</resources>
