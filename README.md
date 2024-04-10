@@ -13,7 +13,7 @@ This Android application is developed as part of the Patika.dev Android Bootcamp
 - Added error handling to gracefully handle network errors, server errors, and unexpected responses.
 - Used Kotlin Coroutines for asynchronous network requests to avoid blocking the main UI thread.
 - Designed a simple user interface with two TextViews to display the response of login and profile requests.
-- Utilized Harun Yüksel's demonstration from last week's class as a reference for UI design, featuring a clean and minimalist layout.
+- Utilized Harun Hoca's demonstration from last week's class as a reference for UI design, featuring a clean and minimalist layout.
 
 ## How to Run:
 1. Clone or download the project from the GitHub repository.
