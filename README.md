@@ -14,6 +14,7 @@ This Android application is developed as part of the Patika.dev Android Bootcamp
 - Used Kotlin Coroutines for asynchronous network requests to avoid blocking the main UI thread.
 - Designed a simple user interface with two TextViews to display the response of login and profile requests.
 - Utilized Harun Hoca's demonstration from last week's class as a reference for UI design, featuring a clean and minimalist layout.
+- Implemented separation of concerns
 
 ## How to Run:
 1. Clone or download the project from the GitHub repository.

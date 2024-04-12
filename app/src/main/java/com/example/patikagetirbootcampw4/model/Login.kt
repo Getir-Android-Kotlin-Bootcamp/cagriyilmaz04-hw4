@@ -1,4 +1,4 @@
-package com.example.patikagetirbootcampw4
+package com.example.patikagetirbootcampw4.model
 
 
 data class Login(
