@@ -4,11 +4,14 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.os.StrictMode
+import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.example.patikagetirbootcampw4.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
@@ -30,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
             val login = Login("fatih1@gmail.com", "Gptmap123")
             val loginResponse = makePostRequest(login)
-
 
             if (loginResponse.startsWith("Hata:")) {
                 launch(Dispatchers.Main) {
@@ -70,10 +72,10 @@ class MainActivity : AppCompatActivity() {
                     return reader.readText()
                 }
             } else {
-                return "Hata: Sunucudan beklenmeyen bir yanıt alındı. Yanıt kodu: $responseCode"
+                return "${getString(R.string.error_message)} $responseCode"
             }
         } catch (e: Exception) {
-            return "Hata: İstek sırasında bir hata oluştu. Hata mesajı: ${e.message}"
+            return "${getString(R.string.error_message)} ${e.message}"
         }
     }
 
@@ -90,8 +92,10 @@ class MainActivity : AppCompatActivity() {
 
         return BufferedReader(InputStreamReader(connection.inputStream)).use { reader ->
 
-            reader.readText().toString()
+            reader.readText()
+
         }
     }
+
 
 }
